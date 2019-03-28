@@ -39,6 +39,16 @@ document.addEventListener("DOMContentLoaded", function() {
             sectionEight.innerHTML = response.data;
         });
     });
+    const buttonNine = document.querySelector('.button-9');
+    const sectionNine = document.querySelector('.section-9');
+    const ul = document.querySelector('.ul-class');
+    buttonNine.addEventListener('click', function() {
+        axios.get('http://intro-ajax-api.herokuapp.com/a_car')
+        .then(function (response) {
+            ul.innerHTML = response.data;
+        })
+    })
+
     
 
 });
