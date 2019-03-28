@@ -30,6 +30,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         });
     });
+    const buttonEight = document.querySelector('.button-8');
+    const sectionEight = document.querySelector('.section-8');
+    buttonEight.addEventListener('click', function() {
+        axios.get('http://intro-ajax-api.herokuapp.com/time', {params: { timezone:  'America/Mexico_City'}})
+        .then(function (response) {
+            console.log(response);
+            sectionEight.innerHTML = response.data;
+        });
+    });
     
 
 });
