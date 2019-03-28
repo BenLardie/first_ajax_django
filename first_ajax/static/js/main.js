@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
     buttonTwo.addEventListener('click', function() {
         axios.get('http://intro-ajax-api.herokuapp.com/ping')
         .then(function (response) {
+        section = document.querySelector('section');
         console.log('response', response);
-        
+        section.innerHTML = response.data;
         });
     });
 
